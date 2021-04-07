@@ -1,0 +1,47 @@
+.species__wrapper {
+  outline: 5px solid rgb(231, 211, 56);
+  outline-offset: -5px;
+
+  background-image: "../img/hero-mobile.png";
+  background-color: $white-smoke;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.species__title {
+  font-size: 27px;
+  line-height: 30px;
+  color: $black;
+  margin: 0;
+  text-align: center;
+  padding-top: 73px;
+  padding-bottom: 120px;
+}
+
+.species__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.species__item {
+  &:first-child {
+    background-color: $downy;
+  }
+
+  &:last-child {
+    background-color: $puerto-rico;
+  }
+}
+
+.species-link {
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+
+  @include link (none, $white);
+
+  p {
+    margin: 0;
+  }
+}

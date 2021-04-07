@@ -1,0 +1,44 @@
+.card__wrapper {
+  outline: 5px solid rgb(56, 231, 56);
+  outline-offset: -5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: "../../img/icon/zigzag-line.svg";
+    height: 6px;
+    width: 100%;
+    bottom: -36px;
+  }
+  margin-bottom: 73px;
+}
+
+.card__title {
+  @include title;
+}
+
+.card__promo {
+  line-height: 20px;
+  font-weight: bold;
+  color: $downy;
+  margin: 0;
+}
+
+.card__text {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.card__options {
+  font-size: 15px;
+}
+
+.card__price {
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.card__button {
+  @include button;
+}
