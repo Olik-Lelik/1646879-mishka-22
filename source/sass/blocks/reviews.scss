@@ -1,0 +1,47 @@
+.reviews__wrapper {
+  outline: 5px solid rgba(31, 233, 199, 0.367);
+  outline-offset: -5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: "../../img/icon/zigzag-line.svg";
+    height: 6px;
+    width: 100%;
+    bottom: -15px;
+  }
+}
+
+.reviews__title {
+  @include title;
+}
+
+.reviews__item {
+  margin: 0;
+  display: none;
+}
+
+.reviews__item--activ {
+  display: block;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.reviews__autor-name {
+  line-height: 24px;
+  font-weight: bold;
+  color: $black;
+}
+
+.reviews__button {
+  border: none;
+  background-color: $white;
+}
+
+.reviews__write {
+  display: block;
+
+  @include button;
+  text-decoration: none;
+}

@@ -1,0 +1,27 @@
+.contacts__wrapper {
+  outline: 5px solid rgba(233, 220, 31, 0.367);
+  outline-offset: -5px;
+}
+
+.contacts__title {
+  @include title;
+  font-size: inherit;
+}
+
+.contacts__list {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.contacts__email {
+  a {
+    @include link (none, $goshawk-grey);
+    border-bottom: 1px solid $downy-2;
+  }
+}
+
+.contacts__write {
+  @include button;
+  display: block;
+  text-decoration: none;
+}

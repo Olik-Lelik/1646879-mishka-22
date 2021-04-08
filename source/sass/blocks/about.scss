@@ -1,0 +1,25 @@
+.about__wrapper {
+  outline: 5px solid rgb(170, 142, 241);
+  outline-offset: -5px;
+}
+
+.about__title {
+  @include title;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about__item {
+  font-weight: bold;
+  color: $black;
+
+  &:nth-child(even) {
+    order: 1;
+  }
+}
