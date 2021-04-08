@@ -11,35 +11,3 @@
   padding: 0;
   list-style: none;
 }
-
-.site-list__item {
-  a {
-    @include link (none, $black);
-  }
-
-  &:nth-child(3) {
-    display: none;
-  }
-
-  &:nth-child(4) {
-    display: none;
-  }
-
-  &:nth-child(5) {
-    display: none;
-  }
-}
-
-.user-list__button-search {
-  border: none;
-  background-color: $white;
-  font: inherit;
-
-  svg {
-    vertical-align: middle;
-  }
-}
-
-.user-list__basket {
-  @include link (none, $black);
-}

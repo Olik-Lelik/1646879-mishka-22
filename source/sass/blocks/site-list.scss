@@ -1,0 +1,17 @@
+.site-list__item {
+  a {
+    @include link (none, $black);
+  }
+
+  &:nth-child(3) {
+    display: none;
+  }
+
+  &:nth-child(4) {
+    display: none;
+  }
+
+  &:nth-child(5) {
+    display: none;
+  }
+}

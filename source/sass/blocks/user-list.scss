@@ -1,0 +1,13 @@
+.user-list__button-search {
+  border: none;
+  background-color: $white;
+  font: inherit;
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.user-list__basket {
+  @include link (none, $black);
+}
