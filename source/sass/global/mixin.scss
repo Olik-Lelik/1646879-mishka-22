@@ -4,7 +4,9 @@
 }
 
 @mixin button () {
+  font: inherit;
   font-size: 18px;
+  line-height: 20px;
   font-weight: bold;
   color: $goshawk-grey;
   border: 2px solid $goshawk-grey;
