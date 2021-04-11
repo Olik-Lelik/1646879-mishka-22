@@ -84,7 +84,7 @@
   &:checked + .filters__label-checkbox::after {
     content: "";
     position: absolute;
-    background-image: url("../../img/icon/tick.svg");
+    background-image: url("../img/icon/tick.svg");
     width: 23px;
     height: 16px;
     top: 0;

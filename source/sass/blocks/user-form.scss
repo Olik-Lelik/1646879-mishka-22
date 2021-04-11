@@ -85,12 +85,7 @@
 }
 
 .user-form__button {
-  font: inherit;
+  font-size: 17px;
   line-height: 16px;
-  font-weight: bold;
-  color: $goshawk-grey;
-  border: 2px solid $goshawk-grey;
-  background-color: $white;
-  box-sizing: border-box;
-  padding: 18px 0 18px 0;
+  padding: 18px;
 }
