@@ -2,21 +2,3 @@
   text-decoration: $decoration;
   color: $color;
 }
-
-@mixin button () {
-  font-size: 18px;
-  font-weight: bold;
-  color: $goshawk-grey;
-  border: 2px solid $goshawk-grey;
-  background-color: $white;
-  box-sizing: border-box;
-  padding: 16px 0 16px 0;
-}
-
-@mixin title () {
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: bold;
-  color: $black;
-  margin: 0;
-}

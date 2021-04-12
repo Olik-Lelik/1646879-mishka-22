@@ -4,8 +4,7 @@
 }
 
 .contacts__title {
-  @include title;
-  font-size: inherit;
+  font-size: 25px;
 }
 
 .contacts__list {
@@ -18,10 +17,4 @@
     @include link (none, $goshawk-grey);
     border-bottom: 1px solid $downy-2;
   }
-}
-
-.contacts__write {
-  @include button;
-  display: block;
-  text-decoration: none;
 }
