@@ -2,6 +2,16 @@
   outline: 5px solid rgba(233, 31, 98, 0.367);
   outline-offset: -5px;
   background-color: $white-smoke;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $whisper-2;
+    top: 50%;
+  }
 }
 
 .page-footer__footer-logo {

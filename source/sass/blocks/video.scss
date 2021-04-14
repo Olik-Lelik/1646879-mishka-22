@@ -1,0 +1,43 @@
+.video {
+  position: relative;
+}
+
+.video__wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $whisper;
+  padding: 22px 34px 34px;
+}
+
+.video__title {
+  margin: 0;
+  padding-left: 57px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $black;
+  margin-bottom: 211.5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/icon/video.svg");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 22px;
+    left: 0;
+    top: 13px;
+  }
+}
+
+.video__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 41px;
+}
+
+.video__process {
+  position: absolute;
+  top: 96px;
+}
