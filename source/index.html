@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -69,7 +70,7 @@
       <h1 class="visually-hidden">Мишка - интернет-магазин вязаных изделий ручной работы</h1>
       <section class="species">
         <div class="species__wrapper">
-          <h2 class="species__title title">Милые штуки ручной   работы для дома</h2>
+          <h2 class="species__title title">Милые штуки ручной<br> работы для дома</h2>
           <ul class="species__list">
             <li class="species__item">
               <a class="species-link" href="#">
@@ -106,18 +107,22 @@
           <p class="card__promo">Товар недели</p>
           <p class="card__text">Экологически чистая пряжа,<br> ручная работа. Доступны в шести<br> расцветках, и трех размерах.</p>
           <dl class="card__options">
-            <dt>Цвет:</dt>
-            <dd>"Тиффани"/серый</dd>
-            <dt>Диаметр:</dt>
-            <dd>25 см</dd>
-            <dt>Высота:</dt>
-            <dd>15 см</dd>
+            <div class="card__options-inner">
+              <dt>Цвет:</dt>
+              <dd>"Тиффани"/серый</dd>
+            </div>
+            <div class="card__options-inner">
+              <dt>Диаметр:</dt>
+              <dd>25 см</dd>
+            </div>
+            <div class="card__options-inner">
+              <dt>Высота:</dt>
+              <dd>15 см</dd>
+            </div>
           </dl>
           <p class="card__price">Цена: 990 руб.</p>
           <button class="card__button button" type="button">Заказать</button>
-          <div class="card__img">
-            <img src="../img/triple-set-mobile1.png" width="260" height="315" alt="Три вязаные корзинки. Большая, средяя и маленькая.">
-          </div>
+          <img class="card__image" src="../img/triple-set-mobile1.png" width="260" height="315" alt="Три вязаные корзинки. Большая, средяя и маленькая.">
         </div>
       </section>
       <section class="about">

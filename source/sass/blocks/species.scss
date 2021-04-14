@@ -1,11 +1,14 @@
 .species__wrapper {
-  outline: 5px solid rgb(231, 211, 56);
-  outline-offset: -5px;
-
-  background-image: "../img/hero-mobile.png";
-  background-color: $white-smoke;
+  min-height: 489px;
+  box-sizing: border-box;
+  padding: 73px 30px 0;
+  background-image: url("../img/hero-mobile.png");
+  background-color: $snow;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: 50% -17px;
+  position: relative;
+
 }
 
 .species__title {
@@ -14,17 +17,22 @@
   color: $black;
   margin: 0;
   text-align: center;
-  padding-top: 73px;
-  padding-bottom: 120px;
+  margin-bottom: 120px;
 }
 
 .species__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .species__item {
+  padding: 24px 36px 18px 30px;
+
   &:first-child {
     background-color: $downy;
   }
@@ -35,6 +43,8 @@
 }
 
 .species-link {
+  display: flex;
+  justify-content: space-between;
   font-size: 19px;
   line-height: 24px;
   font-weight: bold;
@@ -43,5 +53,39 @@
 
   p {
     margin: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .species__wrapper {
+    padding-top: 154px;
+  }
+
+  .species__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon/zigzag-fill-desktop.svg");
+      width: 100%;
+      height: 24px;
+      bottom: -12px;
+    }
+  }
+
+  .species__item {
+    flex-grow: 1;
+  }
+
+  .species__title {
+    margin-bottom: 372px;
+  }
+
+  .species-link {
+    padding: 30px 0 27px;
   }
 }

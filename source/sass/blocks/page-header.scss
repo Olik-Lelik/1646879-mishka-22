@@ -1,5 +1,31 @@
 .page-header__wrapper {
-  outline: 5px solid rgba(255, 0, 0, 0.8);
-  outline-offset: -5px;
   height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header__logo {
+  flex-grow: 1;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__wrapper {
+    position: relative;
+    padding: 0 50px;
+    height: 87px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__logo {
+    text-align: left;
+    align-self: center;
+  }
+
 }

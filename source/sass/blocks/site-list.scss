@@ -15,3 +15,28 @@
     display: none;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 109px;
+    right: 50px;
+    left: 50px;
+    z-index: 2;
+  }
+
+  .site-list__item {
+    margin-right: 38px;
+
+     &:nth-child(5) {
+      display: block;
+      margin: 0;
+      color: $goshawk-grey;
+      font-weight: normal;
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+}

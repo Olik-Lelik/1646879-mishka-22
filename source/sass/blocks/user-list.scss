@@ -1,13 +1,63 @@
 .user-list__button-search {
+  padding: 0;
   border: none;
-  background-color: $white;
+  background-color: transparent;
   font: inherit;
 
   svg {
+    margin-right: 25px;
     vertical-align: middle;
   }
 }
 
 .user-list__basket {
   @include link (none, $black);
+
+  svg {
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-list {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 30px;
+    right: 50px;
+  }
+
+  .user-list__item {
+    padding: 0 31px;
+    position: relative;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 88px;
+      background-color: $black;
+      opacity: 0.1;
+      top: -30px;
+      left: 0;
+    }
+  }
+
+  .user-list__button-search {
+    svg {
+      margin: 0;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .user-list__basket {
+    font-size: 17px;
+  }
 }
