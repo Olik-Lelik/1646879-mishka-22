@@ -1,14 +1,57 @@
+.species {
+  background-color: $snow;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -45px;
+    z-index: -2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon/zigzag-fill-tablet.svg");
+      width: 100%;
+      height: 24px;
+      left: 0;
+      bottom: -12px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-image: url("../img/icon/zigzag-fill-desktop.svg");
+      height: 34px;
+    }
+  }
+}
+
 .species__wrapper {
   min-height: 489px;
   box-sizing: border-box;
   padding: 73px 30px 0;
+  margin-bottom: 30px;
   background-image: url("../img/hero-mobile.png");
-  background-color: $snow;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% -17px;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    min-height: 746px;
+    padding: 154px 50px 0;
+    margin-bottom: 58px;
+    background-image: url("../img/hero-tablet.png");
+    background-position: 50% 0;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    margin: auto;
+    max-width: 1050px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 54px;
+  }
 }
 
 .species__title {
@@ -17,7 +60,14 @@
   color: $black;
   margin: 0;
   text-align: center;
-  margin-bottom: 120px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet ();
+  }
+
+  @media (min-width: $desktop-width) {
+    @include fonts-desktop ();
+  }
 }
 
 .species__list {
@@ -28,11 +78,15 @@
   width: 100%;
   left: 0;
   bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .species__item {
-  padding: 24px 36px 18px 30px;
-
   &:first-child {
     background-color: $downy;
   }
@@ -40,11 +94,16 @@
   &:last-child {
     background-color: $puerto-rico;
   }
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .species-link {
   display: flex;
   justify-content: space-between;
+  padding: 24px 30px 18px;
   font-size: 19px;
   line-height: 24px;
   font-weight: bold;
@@ -54,38 +113,8 @@
   p {
     margin: 0;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .species__wrapper {
-    padding-top: 154px;
-  }
-
-  .species__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/icon/zigzag-fill-desktop.svg");
-      width: 100%;
-      height: 24px;
-      bottom: -12px;
-    }
-  }
-
-  .species__item {
-    flex-grow: 1;
-  }
-
-  .species__title {
-    margin-bottom: 372px;
-  }
-
-  .species-link {
-    padding: 30px 0 27px;
+  @media (min-width: $tablet-width) {
+    padding: 30px 36px 27px;
   }
 }

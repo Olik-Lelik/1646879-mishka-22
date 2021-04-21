@@ -2,3 +2,13 @@
   text-decoration: $decoration;
   color: $color;
 }
+
+@mixin fonts-tablet ($fz: 43px, $lh: 50px) {
+  font-size: $fz;
+  line-height: $lh;
+}
+
+@mixin fonts-desktop ($fz: 53px, $lh: 57px) {
+  font-size: $fz;
+  line-height: $lh;
+}

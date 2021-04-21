@@ -2,9 +2,16 @@
   font-weight: bold;
   line-height: 24px;
   color: $black;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
 
   @media (min-width: $tablet-width) {
-    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 

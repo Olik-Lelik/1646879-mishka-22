@@ -1,7 +1,13 @@
-.page-footer__wrapper {
-  outline: 5px solid rgba(233, 31, 98, 0.367);
-  outline-offset: -5px;
+.page-footer {
   background-color: $white-smoke;
+}
+
+.page-footer__wrapper {
+  padding: 25px 30px 23px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
   position: relative;
 
   &::before {
@@ -11,9 +17,30 @@
     height: 1px;
     background-color: $whisper-2;
     top: 50%;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 50px 58px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 1050px;
   }
 }
 
 .page-footer__footer-logo {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
