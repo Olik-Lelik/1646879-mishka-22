@@ -1,40 +1,225 @@
 .card__wrapper {
-  outline: 5px solid rgb(56, 231, 56);
-  outline-offset: -5px;
   position: relative;
+  padding: 0 30px 42px;
+  margin-bottom: 30px;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
-    background-image: url("../../img/icon/zigzag-line.svg");
+    background-image: url("../img/icon/zigzag-line.svg");
     height: 6px;
     width: 100%;
-    bottom: -36px;
+    left: 0;
+    bottom: 0;
   }
-  margin-bottom: 73px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px 52px;
+    margin-bottom: 55px;
+
+    &::after {
+      background-image: url("../../img/icon/zigzag-line-tablet.svg");
+      height: 17px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto;
+    max-width: 1050px;
+    padding: 0 0 96px;
+    margin-bottom: 68px;
+    position: relative;
+  }
+}
+
+.card__title-inner {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 37.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    justify-content: flex-start;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
 }
 
 .card__title {
   font-size: 25px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet();
+  }
+
+  @media (min-width: $desktop-width) {
+    @include fonts-desktop();
+  }
 }
 
 .card__promo {
   line-height: 20px;
   font-weight: bold;
+  text-transform: uppercase;
   color: $downy;
   margin: 0;
+  margin-bottom: 17.5px;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    line-height: 17px;
+    align-self: center;
+    text-align: center;
+
+    & br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+    margin-left: 46px;
+    margin-right: 63px;
+  }
+}
+
+.card__promo-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 292px 1fr;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 292px 525px;
+    justify-content: end;
+    grid-template-areas:
+      ". img"
+      "text img"
+      "options img"
+      "price img"
+      "button img";
+    column-gap: 58px;
+  }
 }
 
 .card__text {
   font-size: 15px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+
+    @include fonts-tablet (17px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+    grid-area: text;
+  }
 }
 
 .card__options {
   font-size: 15px;
+  margin: 0;
+  margin-bottom: 28px;
+
+  & dd {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: options;
+    margin-bottom: 109px;
+  }
+}
+
+.card__options-inner {
+  display: grid;
+  grid-template-columns: 97px 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid $whisper;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
 }
 
 .card__price {
+  margin: 0;
+  margin-bottom: 24.5px;
   line-height: 24px;
   font-weight: bold;
+  order: 1;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    font-size: 20px;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: price;
+  }
+}
+
+.card__button {
+  order: 1;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: button;
+  }
+}
+
+.card__image {
+  margin-bottom: 25.5px;
+  align-self: center;
+
+  & .card__image2 {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    & .card__image2 {
+      display: none;
+    }
+
+    grid-area: 1 / 2 / -1 / -1;
+    margin-bottom: 0;
+    align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    & .card__image1 {
+      display: none;
+    }
+
+    & .card__image2 {
+      display: block;
+    }
+  }
 }

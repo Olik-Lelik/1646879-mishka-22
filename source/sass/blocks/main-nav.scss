@@ -2,21 +2,21 @@
   font-weight: bold;
   line-height: 24px;
   color: $black;
-  outline: 5px solid rgb(56, 231, 56);
-  outline-offset: -5px;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .main-nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.main-nav__title {
-  margin: 0;
-  font-size: 27px;
-  line-height: 30px;
-  color: $black;
-  background-color: $white-smoke;
-  padding: 74px 0;
 }

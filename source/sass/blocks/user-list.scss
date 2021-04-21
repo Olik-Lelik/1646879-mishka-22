@@ -1,13 +1,68 @@
+.user-list {
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: min-content auto;
+  }
+}
+
+.user-list__item {
+  &:nth-child(3) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px;
+    border-left: 1px solid rgba($black, 0.1);
+
+    &:nth-child(3) {
+      display: block;
+    }
+
+    &:nth-child(2) {
+      padding-right: 0;
+    }
+
+    &:not(:first-child):not(:nth-child(2)) {
+      padding: 0;
+      padding-top: 20px;
+      border: none;
+      font-size: 15px;
+      font-weight: initial;
+      color: $goshawk-grey;
+      grid-column: 1 / -1;
+      justify-self: flex-end;
+    }
+  }
+}
+
 .user-list__button-search {
+  padding: 0;
   border: none;
-  background-color: $white;
+  background-color: transparent;
   font: inherit;
 
   svg {
+    margin-right: 25px;
     vertical-align: middle;
+  }
+
+  @media (min-width: $tablet-width) {
+    svg {
+      margin: 0;
+    }
+
+    span {
+      display: none;
+    }
   }
 }
 
 .user-list__basket {
   @include link (none, $black);
+
+  svg {
+    margin-right: 25px;
+  }
 }
