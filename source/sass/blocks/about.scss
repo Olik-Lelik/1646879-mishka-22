@@ -39,7 +39,8 @@
 .about__list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: baseline;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -48,7 +49,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 58px;
-    align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
@@ -61,6 +61,7 @@
   font-weight: bold;
   color: $black;
   margin-bottom: 33px;
+  flex-basis: 270px;
 
   &:last-child {
     margin-bottom: 0;

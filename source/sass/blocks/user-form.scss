@@ -1,43 +1,166 @@
-.user-form__item {
-  &:not(:last-of-type) {
-    margin-bottom: 34px;
+.user-form {
+  margin-bottom: 55px;
+}
+
+.user-form__wrapper {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1050px;
+    padding: 0;
+    margin: 0 auto;
+    padding-left: 61px;
+    padding-right: 175px;
+    box-sizing: border-box;
   }
 }
 
-.user-form__title {
-  line-height: 16px;
-  font-weight: bold;
-  color: $downy;
-  margin: 0;
-  margin-bottom: 20px;
+.user-form__list,
+.user-form__list-name,
+.user-form__list-contacts {
+  @include list ();
+}
+
+.user-form__item {
+  margin-bottom: 34.5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .user-form__list > &:nth-last-child(2) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 167px auto;
+    align-items: baseline;
+
+    .user-form__list > &:nth-last-child(2) {
+      margin-bottom: 53px;
+    }
+
+    .user-form__list > &:last-child {
+      margin-bottom: 0;
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto 700px;
+
+    .user-form__list > &:nth-last-child(2) {
+      margin-bottom: 50px;
+    }
+
+    .user-form__list > &:last-child {
+      display: flex;
+      width: 700px;
+      margin-left: auto;
+    }
+  }
+}
+
+.user-form__item-name {
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: baseline;
+  }
+}
+
+.user-form__item-contacts {
+  margin-bottom: 34.5px;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% + 2 * 50px);
+    box-sizing: border-box;
+    padding: 50px;
+    border: 2px solid red;
+    margin-left: -50px;
+    background-color: $white-smoke;
+    margin-bottom: 50px;
+  }
+}
+
+.user-form__title-name,
+.user-form__title-contacts,
+.user-form__title-textarea {
+  @include user-form-title ();
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: $downy-2;
+    margin-left: 5%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.user-form__title-contacts {
+  margin-bottom: 4.5px;
+}
+
+.user-form__title-textarea {
+  margin-bottom: 22.5px;
 }
 
 .user-form__label {
   display: block;
   font-weight: bold;
   color: $black;
-  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet (19px, 18px);
+    margin-bottom: 0;
+    padding-right: 25px;
+  }
 }
 
-.user-form__input {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  border: none;
+.user-form__input,
+.user-form__input-contacts {
+  @include user-form-input ();
   border-bottom: 2px solid $black;
+  padding-top: 17px;
   padding-bottom: 17px;
 
-  &:not(:last-of-type) {
-    margin-bottom: 20px;
-  }
+  @media (min-width: $tablet-width) {
+    padding-left: 17px;
 
-  &::placeholder {
-    color: $black;
-    opacity: 0.3;
+    @include fonts-tablet (19px, 18px);
+  }
+}
+
+.user-form__input-contacts {
+  @media (min-width: $tablet-width) {
+    background-color: $white-smoke;
+    padding: 14px 0 18px 17px;
   }
 }
 
 .user-form__phone {
+  margin-bottom: 24px;
   position: relative;
 
   &::after {
@@ -46,7 +169,21 @@
     background-image: url("../img/icon/phone.svg");
     width: 25px;
     height: 24px;
-    right: 0;
+    top: 0;
+    right: 7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 11px;
+      right: 26px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      right: 8px;
+    }
   }
 }
 
@@ -56,17 +193,34 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../../img/icon/mail.svg");
+    background-image: url("../img/icon/mail.svg");
     background-repeat: no-repeat;
     width: 32px;
     height: 21px;
-    right: 0;
+    top: 0;
+    right: 3px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 16px;
+      right: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      right: 4px;
+    }
   }
 }
 
 .user-form__textarea {
   font: inherit;
   list-style: none;
+  width: 100%;
+  height: 142px;
+  box-sizing: border-box;
   border: 2px solid $goshawk-grey;
   resize: none;
   padding: 17px 17px 0;
@@ -80,12 +234,28 @@
 
 .user-form__legend {
   display: block;
+  padding: 0;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    order: 1;
+    justify-self: end;
+    align-self: center;
+  }
 }
 
 .user-form__button {
-  font-size: 17px;
-  line-height: 16px;
-  padding: 18px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-width: 230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 230px;
+    margin-right: auto;
+  }
 }

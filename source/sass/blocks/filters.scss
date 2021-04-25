@@ -1,16 +1,98 @@
+.filters {
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.filters__wrapper {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.filters__checkbox-wrapper {
+  @media (min-width: $tablet-width) {
+    width: calc(100% + 2 * 50px);
+    box-sizing: border-box;
+    padding: 66px 50px 68px;
+    border: 2px solid red;
+    margin-left: -50px;
+    background-color: $white-smoke;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+}
+
 .filters__fieldset-type {
   margin: 0;
   padding: 0;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 43px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    display: grid;
+    grid-template-columns: 167px 1fr;
+  }
+}
+
+.filters__title-container {
+  padding: 0;
+  margin-bottom: 35px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .filters__title {
   line-height: 16px;
   font-weight: bold;
   color: $downy;
-  padding: 0;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+
+  & span {
+    min-width: 44px;
+  }
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: $downy-2;
+    margin-left: 5%;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 61px;
+  }
 }
 
 .filters__list-radio,
@@ -18,32 +100,72 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -16px;
+  }
+}
+
+.filters__list-checkbox {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: min-content auto;
+    column-gap: 64px;
+    row-gap: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 203px 203px auto;
+    column-gap: 60px;
+    row-gap: 57px;
+  }
 }
 
 .filters__item-radio {
-  padding-left: 61px;
+  padding-left: 60px;
 
   &:not(:last-of-type) {
-    margin-bottom: 34px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 78px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 58px;
+    }
   }
 }
 
 .filters__item-checkbox {
-  padding-left: 61px;
+  padding-left: 60px;
 
   &:not(:last-of-type) {
-    margin-bottom: 33px;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 82px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
   }
 }
 
 .filters__label-radio,
 .filters__label-checkbox {
+  @include fonts-tablet (17px, 18px);
   display: block;
   font-weight: bold;
   color: $black;
   position: relative;
   user-select: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet (19px, 18px);
+  }
 }
 
 .filters__input-radio {
@@ -55,7 +177,14 @@
     border-radius: 50%;
     border: 2px solid $goshawk-grey;
     top: -12px;
-    left: -61px;
+    left: -60px;
+
+    @media (min-width: $tablet-width) {
+      width: 48px;
+      height: 48px;
+      left: -78px;
+      top: calc((52px - 18px) / -2);
+    }
   }
 
   &:checked + .filters__label-radio::after {
@@ -66,7 +195,13 @@
     border-radius: 50%;
     background-color: $downy-2;
     top: 0;
-    left: -49px;
+    left: -48px;
+
+    @media (min-width: $tablet-width) {
+      width: 22px;
+      height: 22px;
+      left: -63px;
+    }
   }
 }
 
@@ -78,7 +213,14 @@
     height: 34px;
     border: 2px solid $goshawk-grey;
     top: -9px;
-    left: -61px;
+    left: -60px;
+
+    @media (min-width: $tablet-width) {
+      width: 48px;
+      height: 48px;
+      left: -82px;
+      top: calc((52px - 18px) / -2);
+    }
   }
 
   &:checked + .filters__label-checkbox::after {
@@ -89,5 +231,12 @@
     height: 16px;
     top: 0;
     left: -54px;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/icon/tick-tablet.svg");
+      width: 32px;
+      height: 22px;
+      left: -72px;
+    }
   }
 }

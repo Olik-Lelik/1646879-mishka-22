@@ -2,6 +2,8 @@
   position: relative;
   padding: 0 30px 42px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 
   &::after {
     content: "";
@@ -16,6 +18,10 @@
   @media (min-width: $tablet-width) {
     padding: 0 50px 52px;
     margin-bottom: 55px;
+    display: grid;
+    grid-template-columns: 292px 1fr;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 42px;
 
     &::after {
       background-image: url("../../img/icon/zigzag-line-tablet.svg");
@@ -28,24 +34,15 @@
     max-width: 1050px;
     padding: 0 0 96px;
     margin-bottom: 68px;
-    position: relative;
-  }
-}
-
-.card__title-inner {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 37.5px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    justify-content: flex-start;
-    position: absolute;
-    top: 60px;
-    left: 0;
+    justify-content: end;
+    grid-template:
+      "title img" 1fr
+      "text img"
+      "options img"
+      "price img"
+      "button img"
+      / 292px 525px;
+    column-gap: 58px;
   }
 }
 
@@ -54,10 +51,15 @@
 
   @media (min-width: $tablet-width) {
     @include fonts-tablet();
+    margin-bottom: 37px;
+    grid-column: 1 / -1;
   }
 
   @media (min-width: $desktop-width) {
     @include fonts-desktop();
+    grid-area: 1 / 1 / 2 / -1;
+    z-index: 2;
+    align-self: flex-end;
   }
 }
 
@@ -74,10 +76,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0;
     line-height: 17px;
-    align-self: center;
     text-align: center;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    right: 77px;
 
     & br {
       display: block;
@@ -85,9 +89,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    order: -1;
-    margin-left: 46px;
-    margin-right: 63px;
+    top: 69px;
+    right: auto;
+    left: 46px;
   }
 }
 
@@ -95,25 +99,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 292px 1fr;
-    grid-template-rows: repeat(4, auto);
-    column-gap: 42px;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 292px 525px;
-    justify-content: end;
-    grid-template-areas:
-      ". img"
-      "text img"
-      "options img"
-      "price img"
-      "button img";
-    column-gap: 58px;
-  }
 }
 
 .card__text {
@@ -121,6 +106,7 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 16px;
+  max-width: 340px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 48px;
@@ -197,7 +183,14 @@
 
 .card__image {
   margin-bottom: 25.5px;
-  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 334px;
+  width: 100%;
+
+  & img {
+    width: 100%;
+  }
 
   & .card__image2 {
     display: none;
@@ -208,12 +201,13 @@
       display: none;
     }
 
-    grid-area: 1 / 2 / -1 / -1;
+    grid-area: 2 / 2 / -1 / -1;
     margin-bottom: 0;
-    align-self: flex-end;
   }
 
   @media (min-width: $desktop-width) {
+    grid-area: 1 / 2 / -1 / -1;
+
     & .card__image1 {
       display: none;
     }
