@@ -15,6 +15,9 @@
 }
 
 .site-list__item {
+  padding: 27px 30px 27px 76px;
+  border-top: 1px solid $whisper;
+
   a {
     @include link (none, $black);
   }
@@ -28,6 +31,9 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+
     &:first-child {
       margin-right: 38px;
     }

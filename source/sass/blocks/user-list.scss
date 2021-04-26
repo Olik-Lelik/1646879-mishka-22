@@ -8,12 +8,16 @@
 }
 
 .user-list__item {
+  padding: 27px 30px;
+  border-top: 1px solid $whisper;
+
   &:nth-child(3) {
     display: none;
   }
 
   @media (min-width: $tablet-width) {
     padding: 32px;
+    border: none;
     border-left: 1px solid rgba($black, 0.1);
 
     &:nth-child(3) {

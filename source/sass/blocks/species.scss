@@ -3,7 +3,6 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    margin-top: -45px;
     z-index: -2;
 
     &::after {
@@ -26,9 +25,8 @@
 }
 
 .species__wrapper {
-  min-height: 489px;
   box-sizing: border-box;
-  padding: 73px 30px 0;
+  padding: 73px 0 0;
   margin-bottom: 30px;
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
@@ -37,19 +35,16 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    min-height: 746px;
     padding: 154px 50px 0;
     margin-bottom: 58px;
     background-image: url("../img/hero-tablet.png");
     background-position: 50% 0;
   }
 
-
   @media (min-width: $desktop-width) {
     margin: auto;
     max-width: 1050px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 157px 0 0;
     margin-bottom: 54px;
   }
 }
@@ -59,14 +54,19 @@
   line-height: 30px;
   color: $black;
   margin: 0;
+  margin-bottom: 120px;
+  padding: 0 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     @include fonts-tablet ();
+    margin-bottom: 372px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     @include fonts-desktop ();
+    margin-bottom: 355px;
   }
 }
 
@@ -74,10 +74,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  position: absolute;
   width: 100%;
-  left: 0;
-  bottom: 0;
 
   @media (min-width: $tablet-width) {
     display: flex;
