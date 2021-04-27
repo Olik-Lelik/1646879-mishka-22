@@ -1,43 +1,144 @@
 .video {
-  position: relative;
+  margin-bottom: 58px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 105px;
+  }
 }
 
 .video__wrapper {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.video__content-wrapper {
   display: flex;
   flex-direction: column;
-  border: 1px solid $whisper;
-  padding: 22px 34px 34px;
+  outline: 1px solid $whisper;
+  padding: 22px 34px 33px 34px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 42px 46px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 96px 57px 60px 0;
+    display: grid;
+    grid-template:
+      "video title"
+      "video text"
+      "video button"
+      / 683px auto;
+    column-gap: 80px;
+    overflow: hidden;
+  }
 }
 
 .video__title {
-  margin: 0;
+  @include fonts-mobile ();
+
   padding-left: 57px;
-  line-height: 24px;
-  font-weight: bold;
-  color: $black;
-  margin-bottom: 211.5px;
+  margin-bottom: 26.5px;
+  box-sizing: border-box;
+  width: 156px;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../../img/icon/video.svg");
+    background-image: url("../img/icon/video.svg");
     background-repeat: no-repeat;
     width: 32px;
     height: 22px;
     left: 0;
     top: 13px;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 24.5px;
+    padding-left: 65px;
+    width: 100%;
+
+    &::before {
+      top: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: title;
+    padding: 0;
+    margin-bottom: 27.5px;
+
+    &::before {
+      top: -50px;
+    }
+  }
 }
 
 .video__text {
+  @include fonts-mobile (13px, 24px);
+
   margin: 0;
-  font-size: 13px;
-  line-height: 24px;
   margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet (15px, 30px);
+    max-width: 584px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: text;
+    margin-bottom: 51px;
+  }
 }
 
 .video__process {
-  position: absolute;
-  top: 96px;
+  width: calc(100% + (34px + 1px) * 2);
+  margin-left: calc((34px + 1px) * -1);
+  background-color: $white-smoke;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 41px;
+    order: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: video;
+    height: calc(100% + 96px * 2);
+    margin-top: -96px;
+  }
+}
+
+.video__button {
+  @include fonts-mobile (18px, 16px);
+
+  padding: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: inherit;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: button;
+    align-self: flex-end;
+  }
 }

@@ -3,7 +3,7 @@
   color: $color;
 }
 
-@mixin fonts-mobile ($fs: 43px, $lh: 50px) {
+@mixin fonts-mobile ($fs: 17px, $lh: 24px) {
   font-size: $fs;
   line-height: $lh;
 }
@@ -25,11 +25,10 @@
 }
 
 @mixin user-form-title {
+  margin: 0;
   line-height: 16px;
   font-weight: bold;
   color: $downy;
-  margin: 0;
-  margin-bottom: 29px;
   display: flex;
   align-items: center;
 }

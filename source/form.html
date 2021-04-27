@@ -77,12 +77,12 @@
               </legend>
               <ul class="filters__list-radio">
                 <li class="filters__item-radio">
-                  <input class="filters__input-radio visually-hidden" type="radio" name="goods-group" value="accessories" id="filter-accessory" checked>
-                  <label class="filters__label-radio" for="filter-accessory">Аксессуар для интерьера</label>
+                  <input class="filters__input--radio visually-hidden" type="radio" name="goods-group" value="accessories" id="filter-accessory" checked>
+                  <label class="filters__label--radio" for="filter-accessory">Аксессуар для интерьера</label>
                 </li>
                 <li class="filters__item-radio">
-                  <input class="filters__input-radio visually-hidden" type="radio" name="goods-group" value="toys" id="filters-toy">
-                  <label class="filters__label-radio" for="filters-toy">Детская игрушка</label>
+                  <input class="filters__input--radio visually-hidden" type="radio" name="goods-group" value="toys" id="filters-toy">
+                  <label class="filters__label--radio" for="filters-toy">Детская игрушка</label>
                 </li>
               </ul>
             </fieldset>
@@ -93,28 +93,28 @@
                 </legend>
                 <ul class="filters__list-checkbox">
                   <li class="filters__item-checkbox">
-                    <input class="filters__input-checkbox visually-hidden" type="checkbox" name="color-white" id="filter-color-white" checked>
-                    <label class="filters__label-checkbox" for="filter-color-white">Белый</label>
+                    <input class="filters__input--checkbox visually-hidden" type="checkbox" name="color-white" id="filter-color-white" checked>
+                    <label class="filters__label--checkbox" for="filter-color-white">Белый</label>
                   </li>
                   <li class="filters__item-checkbox">
-                    <input class="filters__input-checkbox visually-hidden" type="checkbox" name="color-grey" id="filter-color-grey" checked>
-                    <label class="filters__label-checkbox" for="filter-color-grey">Серый</label>
+                    <input class="filters__input--checkbox visually-hidden" type="checkbox" name="color-grey" id="filter-color-grey" checked>
+                    <label class="filters__label--checkbox" for="filter-color-grey">Серый</label>
                   </li>
                   <li class="filters__item-checkbox">
-                    <input class="filters__input-checkbox visually-hidden" type="checkbox" name="color-tiffany" id="filter-color-tiffany">
-                    <label class="filters__label-checkbox" for="filter-color-tiffany">«Тиффани»</label>
+                    <input class="filters__input--checkbox visually-hidden" type="checkbox" name="color-tiffany" id="filter-color-tiffany">
+                    <label class="filters__label--checkbox" for="filter-color-tiffany">«Тиффани»</label>
                   </li>
                   <li class="filters__item-checkbox">
-                    <input class="filters__input-checkbox visually-hidden" type="checkbox" name="color-black" id="filter-color-black">
-                    <label class="filters__label-checkbox" for="filter-color-black">Черный</label>
+                    <input class="filters__input--checkbox visually-hidden" type="checkbox" name="color-black" id="filter-color-black">
+                    <label class="filters__label--checkbox" for="filter-color-black">Черный</label>
                   </li>
                   <li class="filters__item-checkbox">
-                    <input class="filters__input-checkbox visually-hidden" type="checkbox" name="color-pink" id="filter-color-pink">
-                    <label class="filters__label-checkbox" for="filter-color-pink">Розовый</label>
+                    <input class="filters__input--checkbox visually-hidden" type="checkbox" name="color-pink" id="filter-color-pink">
+                    <label class="filters__label--checkbox" for="filter-color-pink">Розовый</label>
                   </li>
                   <li class="filters__item-checkbox">
-                    <input class="filters__input-checkbox visually-hidden" type="checkbox" name="color-orange" id="filter-color-orange">
-                    <label class="filters__label-checkbox" for="filter-color-orange">Оранжевый</label>
+                    <input class="filters__input--checkbox visually-hidden" type="checkbox" name="color-orange" id="filter-color-orange">
+                    <label class="filters__label--checkbox" for="filter-color-orange">Оранжевый</label>
                   </li>
                 </ul>
               </fieldset>
@@ -126,8 +126,7 @@
         <div class="user-form__wrapper">
           <h2 class="visually-hidden">Форма заказа товара</h2>
           <form action="https://echo.htmlacademy.ru" method="POST">
-            <ul class="user-form__list">
-              <li class="user-form__item">
+              <div class="user-form__item">
                 <p class="user-form__title-name">ФИО</p>
                 <ul class="user-form__list-name">
                   <li class="user-form__item-name">
@@ -143,31 +142,29 @@
                     <input class="user-form__input" type="text" name="middle-name" id="user-middle-name" placeholder="Отчество, если желаете">
                   </li>
                 </ul>
-              </li>
-              <li class="user-form__item-contacts">
-                <ul class="user-form__list-contacts">
-                  <li class="user-form__item">
-                    <p class="user-form__title-contacts">Тел</p>
-                    <label class="user-form__phone">
-                      <input class="user-form__input-contacts" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" >
-                    </label>
-                  </li>
-                  <li class="user-form__item">
-                    <p class="user-form__title-contacts">E-mail</p>
-                    <label class="user-form__email">
-                      <input class="user-form__input-contacts" type="email" name="user-email" placeholder="Ваш Email*">
-                    </label>
-                  </li>
-                </ul>
-              </li>
-              <li class="user-form__item">
+              </div>
+              <div class="user-form__list-contacts">
+                <span class="user-form__item-contacts">
+                  <p class="user-form__title-contacts">Тел</p>
+                  <label class="user-form__phone">
+                    <input class="user-form__input-contacts" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" >
+                  </label>
+                </span>
+                <span class="user-form__item-contacts">
+                  <p class="user-form__title-contacts">E-mail</p>
+                  <label class="user-form__email">
+                    <input class="user-form__input-contacts" type="email" name="user-email" placeholder="Ваш Email*">
+                  </label>
+                </span>
+              </div>
+              <div class="user-form__item">
                 <p class="user-form__title-textarea">Доп</p>
                 <textarea class="user-form__textarea" name="about" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-              </li>
-              <li class="user-form__item">
+              </div>
+              <div class="user-form__item">
                 <small class="user-form__legend">*Поля обязательны для заполнения</small>
                 <button class="user-form__button button" type="submit">Отправить заказ</button>
-              </li>
+              </div>
             </ul>
           </form>
         </div>
