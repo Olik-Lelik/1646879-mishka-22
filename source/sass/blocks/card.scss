@@ -24,7 +24,7 @@
     column-gap: 42px;
 
     &::after {
-      background-image: url("../../img/icon/zigzag-line-tablet.svg");
+      background-image: url("../img/icon/zigzag-line-tablet.svg");
       height: 17px;
     }
   }
@@ -71,21 +71,14 @@
   margin: 0;
   margin-bottom: 17.5px;
 
-  & br {
-    display: none;
-  }
-
   @media (min-width: $tablet-width) {
+    width: 100px;
     line-height: 17px;
     text-align: center;
     margin-bottom: 0;
     position: absolute;
     top: 0;
     right: 77px;
-
-    & br {
-      display: block;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -207,6 +200,7 @@
 
   @media (min-width: $desktop-width) {
     grid-area: 1 / 2 / -1 / -1;
+    max-width: 100%;
 
     & .card__image1 {
       display: none;
