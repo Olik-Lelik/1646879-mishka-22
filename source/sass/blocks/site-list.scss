@@ -10,7 +10,7 @@
   @media (min-width: $desktop-width) {
     padding: 0;
     display: grid;
-    grid-template-columns: 184px auto;
+    grid-template-columns: 186px auto;
   }
 }
 
@@ -28,6 +28,14 @@
 
   &:nth-child(4) {
     display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
@@ -57,7 +65,7 @@
     }
 
     &:nth-child(even) {
-      padding-left: 34px;
+      padding-left: 35px;
     }
 
     &:not(:first-child):not(:nth-child(2)) {

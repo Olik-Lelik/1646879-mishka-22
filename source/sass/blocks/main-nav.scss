@@ -17,3 +17,11 @@
   padding: 0;
   list-style: none;
 }
+
+.main-nav--closed {
+  display: none;
+}
+
+.main-nav--opened {
+  display: block;
+}

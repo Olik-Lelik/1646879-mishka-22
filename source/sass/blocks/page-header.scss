@@ -3,6 +3,8 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+    position: relative;
+    z-index: 3;
 
     &::before {
       content: "";
@@ -11,7 +13,7 @@
       height: 1px;
       background-color: $black;
       opacity: 0.1;
-      top: 89px;
+      top: 87px;
       left: 0;
     }
   }
@@ -35,47 +37,44 @@
   }
 }
 
-.page-header__logo {
-  text-align: center;
-  align-self: center;
+.page-header__toggle {
+  display: none;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 22px;
-    left: 50px;
-    z-index: 2;
-  }
-
-  @media (min-width: $desktop-width) {
-    left: 460px;
+    & + .main-nav {
+      display: flex;
+    }
   }
 }
 
 .page-header__toggle--closed {
+  display: block;
   position: absolute;
   padding: 0;
-  top: 32px;
-  right: 30px;
+  top: 29px;
+  right: 31px;
   width: 20px;
-  height: 14px;
-  border: none;
+  height: 21px;
   background-color: transparent;
   cursor: pointer;
+  border: none;
+  outline: none;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 0;
     width: 20px;
     height: 2px;
     background-color: $black;
-    box-shadow: 0 5px 0 0 $black,
-      0 10px 0 0 $black;
+    box-shadow: 0 6px 0 0 $black,
+      0 12px 0 0 $black;
   }
 
-  & + .main-nav {
-    display: none;
+  &:focus-visible {
+    outline: auto;
+    outline-offset: 3px;
   }
 
   @media (min-width: $tablet-width) {
@@ -83,26 +82,18 @@
   }
 }
 
-.page-header__toggle--opened {
-  position: absolute;
-  padding: 0;
-  top: 30px;
-  right: 30px;
-  width: 21px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 
+.page-header_toggle--opened {
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 8px;
-    right: -2px;
+    top: 9px;
+    right: -3px;
     width: 25px;
     height: 2px;
     background-color: $black;
+    box-shadow: none;
   }
 
   &::before {
@@ -111,10 +102,6 @@
 
   &::after {
     transform: rotate(-45deg);
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 
