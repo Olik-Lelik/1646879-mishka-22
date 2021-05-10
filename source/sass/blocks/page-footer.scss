@@ -17,7 +17,7 @@
     height: 1px;
     background-color: $whisper-2;
     top: 50%;
-    left: 30p;
+    left: 30px;
   }
 
   @media (min-width: $tablet-width) {
@@ -45,7 +45,7 @@
   }
 
   &:active svg {
-    opacity: 0.3;;
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {

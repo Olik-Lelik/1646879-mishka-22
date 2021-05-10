@@ -213,6 +213,7 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 17px;
+
     @include fonts-tablet (19px, 18px);
   }
 }
@@ -290,7 +291,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include fonts-tablet (19px, 18px)
+    @include fonts-tablet (19px, 18px);
   }
 }
 

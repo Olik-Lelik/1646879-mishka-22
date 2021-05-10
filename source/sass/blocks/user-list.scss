@@ -94,7 +94,7 @@
 .user-list__basket {
   @include link (none, $black);
 
-  & .user-list__basket-icon{
+  & .user-list__basket-icon {
     margin-right: 20px;
   }
 
@@ -112,13 +112,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    & .user-list__basket-icon{
+    & .user-list__basket-icon {
       margin-right: 28px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    & .user-list__basket-icon{
+    & .user-list__basket-icon {
       margin-right: 28px;
     }
   }
