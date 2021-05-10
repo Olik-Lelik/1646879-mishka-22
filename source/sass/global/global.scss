@@ -47,9 +47,20 @@ img {
   text-decoration: none;
   border: 2px solid $goshawk-grey;
   background-color: $white;
+  outline: none;
 
-  @media (min-width: $tablet-width) {
-    font-size: 17px;
+  &:hover {
+    background: linear-gradient(0deg, $goshawk-grey, $goshawk-grey);
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
+  &:focus-visible {
+    outline: auto;
+    outline-offset: 3px;
   }
 }
 

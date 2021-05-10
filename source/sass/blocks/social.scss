@@ -1,5 +1,5 @@
 .social {
-  margin-bottom: 50px;
+  margin-bottom: 46px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -10,9 +10,23 @@
   list-style: none;
   min-width: 142px;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.social__link {
+  &:hover svg {
+    fill: $puerto-rico-2;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }

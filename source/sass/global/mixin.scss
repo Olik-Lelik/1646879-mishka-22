@@ -46,3 +46,8 @@
     opacity: 0.3;
   }
 }
+
+@mixin icon ($ml, $mb) {
+  margin-left: $ml;
+  margin-bottom: $mb;
+}

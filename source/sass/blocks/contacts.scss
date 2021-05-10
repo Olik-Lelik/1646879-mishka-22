@@ -24,7 +24,7 @@
       width: 47px;
       height: 81px;
       top: 0;
-      right: 50px;
+      right: 53px;
     }
   }
 
@@ -32,7 +32,7 @@
     padding: 0;
     margin-bottom: 105px;
     min-height: auto;
-    grid-template-columns: 295px 527px;
+    grid-template-columns: 297px 525px;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
       ". map"
@@ -40,17 +40,19 @@
       "list map"
       "button map";
     justify-content: end;
-    column-gap: 55px;
+    column-gap: 53px;
 
     &::before {
-      top: 27px;
-      left: 62px;
+      top: 62px;
+      left: 64px;
     }
   }
 }
 
 .contacts__title {
-  font-size: 25px;
+  @include fonts-mobile (18px, 30px);
+  font-weight: bold;
+  margin: 0;
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
@@ -61,7 +63,7 @@
   @media (min-width: $desktop-width) {
     @include fonts-desktop();
     grid-area: title;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
   }
 }
 
@@ -85,25 +87,21 @@
 
   @media (min-width: $desktop-width) {
     grid-area: list;
-    margin-bottom: 84.5px;
+    margin-bottom: 86px;
   }
 }
 
 .contacts__email-inner {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 
   & dt {
-    width: 80px;
-  }
-
-  & dd {
-    flex-grow: 1;
+    width: 77px;
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0;
+    margin-bottom: 40px;
     margin-right: 50px;
   }
 
@@ -119,7 +117,7 @@
   flex-wrap: wrap;
 
   & dt {
-    width: 80px;
+    width: 77px;
   }
 
   & dd {
@@ -133,14 +131,35 @@
 }
 
 .contacts__email {
+  flex-grow: 1;
+
   a {
     @include link (none, $goshawk-grey);
     border-bottom: 1px solid $downy-2;
+    padding-bottom: 3px;
+
+    &:hover {
+      color: $puerto-rico-2;
+      border-color: $puerto-rico-2;
+    }
+
+    &:active {
+      border-color: rgba($puerto-rico-2, 0.1);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    a {
+      padding-bottom: 7px;
+    }
   }
 }
 
 .contacts__write {
+  font-size: 18px;
+
   @media (min-width: $tablet-width) {
+    font-size: 17px;
     min-width: 230px;
     justify-self: center;
   }
@@ -156,17 +175,29 @@
   margin-left: -30px;
   margin-bottom: 42px;
   height: 454px;
-  background-image: url("../img/map-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: $whisper;
+  position: relative;
+
+  & iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon/map-pin.svg");
+    width: 67px;
+    height: 100px;
+    top: 32%;
+    left: 43%;
+  }
 
   @media (min-width: $tablet-width) {
     width: calc(100% + 2 * 50px);
     margin-left: -50px;
     margin-bottom: 55px;
     height: 457px;
-    background-image: url("../img/map-tablet.jpg");
   }
 
   @media (min-width: $desktop-width) {
@@ -175,3 +206,6 @@
     width: 100%;
   }
 }
+
+/*top: calc(50% - 50px);
+left: calc(50% - 33.5px);*/

@@ -17,5 +17,14 @@
 .copyright__link {
   & svg {
     vertical-align: middle;
+    fill: $downy;
+  }
+
+  &:hover svg {
+    fill: $puerto-rico-2;
+  }
+
+  &:active svg {
+    opacity: 0.3;
   }
 }

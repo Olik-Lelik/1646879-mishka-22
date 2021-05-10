@@ -1,0 +1,66 @@
+.logo {
+  text-align: center;
+  align-self: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 22px;
+    left: 48px;
+    z-index: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 450px;
+    top: 9px;
+  }
+}
+
+.logo__wrapper {
+  width: 86px;
+  height: 35px;
+
+  & .logo-tablet {
+    display: none;
+  }
+
+  & .logo-desktop {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 114px;
+    height: 46px;
+
+    & .logo-tablet {
+      display: block;
+    }
+
+    & .logo-mobile {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+    height: 72px;
+
+    & .logo-tablet {
+      display: none;
+    }
+
+    & .logo-desktop {
+      display: block;
+    }
+  }
+}
+
+.logo-nothome {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    filter: drop-shadow(0 4px 4px rgba($black, 0.25));
+  }
+}

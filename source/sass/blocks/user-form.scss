@@ -3,6 +3,10 @@
   margin-bottom: 55px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 50px;
   }
 }
@@ -11,31 +15,37 @@
   padding: 0 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 50px;
+    padding: 5px 50px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1050px;
     margin: 0 auto;
-    padding: 0;
-    padding-left: 61px;
-    padding-right: 175px;
+    padding: 5px 175px 0 61px;
     box-sizing: border-box;
   }
 }
 
 .user-form__item {
-  margin-bottom: 34.5px;
+  margin-bottom: 35px;
+
+  &:nth-last-child(2) {
+    margin-bottom: 13px;
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     display: grid;
     grid-template-columns: 167px auto;
     align-items: baseline;
+
+    &:nth-last-child(2) {
+      margin-bottom: 54px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -46,6 +56,10 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: auto 700px;
+
+    &:nth-last-child(2) {
+      margin-bottom: 50px;
+    }
 
     &:last-child {
       display: flex;
@@ -70,7 +84,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     align-items: baseline;
   }
 }
@@ -80,7 +94,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 50px;
-    padding: 50px 0;
+    padding: 47px 0 49px;
     position: relative;
 
     &::before {
@@ -108,7 +122,6 @@
 }
 
 .user-form__item-contacts {
-  display: block;
   margin-bottom: 34.5px;
 
   &:last-child {
@@ -139,7 +152,7 @@
     flex-grow: 1;
     height: 1px;
     background-color: $downy-2;
-    margin-left: 5%;
+    margin-left: 9%;
   }
 
   @media (min-width: $tablet-width) {
@@ -160,7 +173,7 @@
 }
 
 .user-form__title-textarea {
-  margin-bottom: 22.5px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -184,7 +197,19 @@
   @include user-form-input ();
   border-bottom: 2px solid $black;
   padding-top: 17px;
-  padding-bottom: 17px;
+  padding-bottom: 15px;
+  color: $goshawk-grey;
+
+  &:hover,
+  &:focus {
+    border-color: $downy-2;
+    outline: 0;
+  }
+
+  &:focus-visible {
+    outline: auto;
+    outline-offset: 3px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 17px;
@@ -194,67 +219,51 @@
 }
 
 .user-form__input-contacts {
+  &:hover + .user-form__icon-phone,
+  &:focus + .user-form__icon-phone,
+  &:hover + .user-form__icon-email,
+  &:focus + .user-form__icon-email {
+    fill: $downy-2;
+    opacity: 1;
+  }
+
   @media (min-width: $tablet-width) {
     background-color: $white-smoke;
-    padding: 14px 0 18px 17px;
+    padding: 14px 0 12px 17px;
   }
 }
 
-.user-form__phone {
-  margin-bottom: 24px;
+.user-form__container {
   position: relative;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/phone.svg");
-    width: 25px;
-    height: 24px;
-    top: 0;
-    right: 7px;
+.user-form__icon-phone {
+  position: absolute;
+  top: -2px;
+  right: 7px;
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+    right: 26px;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-
-    &::after {
-      top: 11px;
-      right: 26px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::after {
-      right: 8px;
-    }
+    right: 8px;
   }
 }
 
-.user-form__email {
-  position: relative;
+.user-form__icon-email {
+  position: absolute;
+  top: 3px;
+  right: 3px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/mail.svg");
-    background-repeat: no-repeat;
-    width: 32px;
-    height: 21px;
-    top: 0;
-    right: 3px;
+  @media (min-width: $tablet-width) {
+    top: 17px;
+    right: 22px;
   }
 
   @media (min-width: $tablet-width) {
-    &::after {
-      top: 16px;
-      right: 22px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::after {
-      right: 4px;
-    }
+    right: 4px;
   }
 }
 
@@ -265,6 +274,7 @@
   height: 142px;
   box-sizing: border-box;
   border: 2px solid $goshawk-grey;
+  color: $black;
   resize: none;
   padding: 17px 17px 0;
 
@@ -272,6 +282,16 @@
     font-family: inherit;
     color: $black;
     opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $downy-2;
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet (19px, 18px);
   }
 }
 

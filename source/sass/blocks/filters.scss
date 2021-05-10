@@ -1,9 +1,9 @@
 .filters {
   overflow: hidden;
-  margin-bottom: 43px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -11,7 +11,7 @@
   padding: 0 30px 12px;
 
   @media (min-width: $tablet-width) {
-    padding: 17px 50px 0;
+    padding: 22px 50px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,7 +24,7 @@
 
 .filters__checkbox-wrapper {
   @media (min-width: $tablet-width) {
-    padding: 50px 0;
+    padding: 67px 0 69px;
     margin: 0;
     position: relative;
 
@@ -125,7 +125,7 @@
     display: grid;
     grid-template-columns: min-content auto;
     column-gap: 64px;
-    row-gap: 55px;
+    row-gap: 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -147,6 +147,12 @@
 
     &:not(:last-of-type) {
       margin-bottom: 58px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-of-type) {
+      margin-bottom: 56px;
     }
   }
 }
@@ -190,13 +196,13 @@
     height: 38px;
     border-radius: 50%;
     border: 2px solid $goshawk-grey;
-    top: -12px;
-    left: -60px;
+    top: -9px;
+    left: -61px;
 
     @media (min-width: $tablet-width) {
       width: 48px;
       height: 48px;
-      left: -78px;
+      left: -76px;
       top: calc((52px - 18px) / -2);
     }
   }
@@ -208,13 +214,14 @@
     height: 18px;
     border-radius: 50%;
     background-color: $downy-2;
-    top: 0;
-    left: -48px;
+    top: 3px;
+    left: -49px;
 
     @media (min-width: $tablet-width) {
       width: 22px;
       height: 22px;
-      left: -63px;
+      top: -3px;
+      left: -61px;
     }
   }
 }
@@ -253,4 +260,27 @@
       left: -72px;
     }
   }
+}
+
+.filters__input--radio:focus-visible + .filters__label--radio::before,
+.filters__input--checkbox:focus-visible + .filters__label--checkbox::before {
+  outline: auto;
+  outline-offset: 3px;
+}
+
+.filters__input--radio:hover + .filters__label--radio::before,
+.filters__input--radio:checked:hover + .filters__label--radio::before,
+.filters__input--checkbox:hover + .filters__label--checkbox::before,
+.filters__input--checkbox:checked:hover + .filters__label--checkbox::before {
+  border-color: $downy-2;
+}
+
+.filters__input--radio:checked + .filters__label--radio::before,
+.filters__input--checkbox:checked + .filters__label--checkbox::before {
+  border-color: rgba($black, 0.3);
+}
+
+.filters__input--radio:disabled + .filters__label--radio::before,
+.filters__input--checkbox:disabled + .filters__label--checkbox::before {
+  border-color: rgba($black, 0.3);
 }

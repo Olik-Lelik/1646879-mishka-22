@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 }
 
@@ -49,8 +49,17 @@
     margin-bottom: 0;
   }
 
+  &:hover .catalog__container {
+    box-shadow: 0 6px 10px rgba($black, 0.1);
+  }
+
+  &:active .catalog__container {
+    box-shadow: 0 3px 5px rgba($black, 0.1);
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -61,24 +70,35 @@
 
 .catalog__container {
   border: 1px solid $whisper;
-  padding: 30px 28px 26.5px;
+  padding: 28px 28px 25px;
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    padding: 27px 34px 0;
+    padding: 27px 32px 23px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 27px 32px 0 28px;
+    padding: 27px 32px 25.5px 28px;
   }
+}
+
+.catalog__item-link {
+  text-decoration: none;
 }
 
 .catalog__title {
   @include fonts-mobile ();
+  margin-bottom: 6px;
 
-  margin-bottom: 16px;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 6px;
@@ -88,9 +108,8 @@
 
 .catalog__desc {
   @include fonts-mobile (13px, 30px);
-
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -102,30 +121,45 @@
   }
 }
 
-.catalog__price {
-  @include fonts-mobile (15px, 24px);
-
-  margin: 0;
-  padding-top: 22.5px;
-  padding-bottom: 25.5px;
-  font-weight: bold;
-  color: $black;
-  position: relative;
+.catalog__inner {
+  padding-top: 22px;
   border-top: 1px solid $whisper;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/cart.svg");
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 19px;
-    right: 0;
-  }
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
+  }
+}
 
+.catalog__price {
+  @include fonts-mobile (15px, 24px);
+  margin: 0;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
     @include fonts-mobile ();
+  }
+}
+
+.catalog__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:hover .catalog__basket-icon {
+    opacity: 1;
+    fill: $downy;
+  }
+
+  &:active .catalog__basket-icon {
+    opacity: 0.3;
+    color: rgba($black, 0.3);
+  }
+
+  &:focus-visible {
+    outline: auto;
+    outline-offset: 3px;
   }
 }
