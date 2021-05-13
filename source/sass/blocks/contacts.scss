@@ -183,16 +183,6 @@
     height: 100%;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/map-pin.svg");
-    width: 67px;
-    height: 100px;
-    top: 32%;
-    left: 43%;
-  }
-
   @media (min-width: $tablet-width) {
     width: calc(100% + 2 * 50px);
     margin-left: -50px;
@@ -206,6 +196,3 @@
     width: 100%;
   }
 }
-
-/*top: calc(50% - 50px);
-left: calc(50% - 33.5px);*/

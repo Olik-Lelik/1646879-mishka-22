@@ -47,7 +47,8 @@
   }
 }
 
-@mixin icon ($ml, $mb) {
+@mixin icon ($mt, $ml, $mb) {
+  margin-top: $mt;
   margin-left: $ml;
   margin-bottom: $mb;
 }

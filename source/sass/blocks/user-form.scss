@@ -201,14 +201,9 @@
   color: $goshawk-grey;
 
   &:hover,
-  &:focus {
+  &:focus:focus-visible {
     border-color: $downy-2;
     outline: 0;
-  }
-
-  &:focus-visible {
-    outline: auto;
-    outline-offset: 3px;
   }
 
   @media (min-width: $tablet-width) {

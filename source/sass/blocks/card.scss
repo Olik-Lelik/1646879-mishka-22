@@ -29,7 +29,7 @@
   @media (min-width: $tablet-width) {
     padding: 0 50px 68px;
     display: grid;
-    grid-template-columns: 292px 334px;
+    grid-template-columns: 44% 1fr;
     grid-template-rows: min-content min-content 1fr min-content min-content;
     column-gap: 42px;
 
