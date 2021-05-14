@@ -58,7 +58,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/icon/video.svg");
+    background-image: url("../img/video.svg");
     background-repeat: no-repeat;
     width: 32px;
     height: 22px;
@@ -93,13 +93,6 @@
   min-width: 198px;
   margin: 0;
   margin-bottom: 41px;
-  word-break: break-all;
-
-  @media (min-width: 360px) {
-    & br {
-      display: none;
-    }
-  }
 
   @media (min-width: $tablet-width) {
     @include fonts-tablet (15px, 30px);
