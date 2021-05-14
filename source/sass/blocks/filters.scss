@@ -1,6 +1,6 @@
 .filters {
   overflow: hidden;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
@@ -8,7 +8,7 @@
 }
 
 .filters__wrapper {
-  padding: 0 30px 12px;
+  padding: 0 30px 15px;
 
   @media (min-width: $tablet-width) {
     padding: 22px 50px 0;
@@ -247,14 +247,14 @@
   &:checked + .filters__label--checkbox::after {
     content: "";
     position: absolute;
-    background-image: url("../img/icon/tick.svg");
+    background-image: url("../img/tick.svg");
     width: 23px;
     height: 16px;
     top: 0;
     left: -54px;
 
     @media (min-width: $tablet-width) {
-      background-image: url("../img/icon/tick-tablet.svg");
+      background-image: url("../img/tick-tablet.svg");
       width: 32px;
       height: 22px;
       left: -72px;

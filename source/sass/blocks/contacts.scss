@@ -20,7 +20,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../img/icon/flag.svg");
+      background-image: url("../img/flag.svg");
       width: 47px;
       height: 81px;
       top: 0;
@@ -52,6 +52,7 @@
 .contacts__title {
   @include fonts-mobile (18px, 30px);
   font-weight: bold;
+  color: $black;
   margin: 0;
   margin-bottom: 28px;
 
@@ -176,21 +177,19 @@
   margin-bottom: 42px;
   height: 454px;
   background-color: $whisper;
+  background-image: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
   position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.png");
+  }
 
   & iframe {
     width: 100%;
     height: 100%;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/map-pin.svg");
-    width: 67px;
-    height: 100px;
-    top: 32%;
-    left: 43%;
   }
 
   @media (min-width: $tablet-width) {
@@ -198,14 +197,21 @@
     margin-left: -50px;
     margin-bottom: 55px;
     height: 457px;
+    background-image: url("../img/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
     grid-area: map;
     margin: 0;
     width: 100%;
+    background-image: url("../img/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
   }
 }
-
-/*top: calc(50% - 50px);
-left: calc(50% - 33.5px);*/

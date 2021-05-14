@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -111,6 +111,9 @@
           <button class="card__button button" type="button" aria-label="Заполнить форму для заказа товара недели">Заказать</button>
           <span class="card__image-wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
@@ -191,7 +194,7 @@
             <div class="reviews__toggles">
               <button class="reviews__toggles-button" aria-label="Кнопка пролистывания отзывов назад">
                 <svg aria-hidden="true" focusable="false" width="50" height="26">
-                  <use xlink:href="img/sprite.svg#lik-left"></use>
+                  <use xlink:href="img/sprite.svg#link-left"></use>
                 </svg>
               </button>
               <button class="reviews__toggles-button" aria-label="кнопка пролистывания отзывов вперед">
@@ -273,6 +276,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/nav.js"></script>
+    <script src="js/nav.min.js"></script>
   </body>
 </html>
