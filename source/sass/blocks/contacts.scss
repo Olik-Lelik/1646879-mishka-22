@@ -52,6 +52,7 @@
 .contacts__title {
   @include fonts-mobile (18px, 30px);
   font-weight: bold;
+  color: $black;
   margin: 0;
   margin-bottom: 28px;
 

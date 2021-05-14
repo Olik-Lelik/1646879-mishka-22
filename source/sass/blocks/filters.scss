@@ -1,6 +1,6 @@
 .filters {
   overflow: hidden;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
@@ -8,7 +8,7 @@
 }
 
 .filters__wrapper {
-  padding: 0 30px 12px;
+  padding: 0 30px 15px;
 
   @media (min-width: $tablet-width) {
     padding: 22px 50px 0;

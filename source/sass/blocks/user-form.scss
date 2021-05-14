@@ -1,13 +1,13 @@
 .user-form {
   overflow: hidden;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 }
 
@@ -308,6 +308,7 @@
 
 .user-form__button {
   width: 100%;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     min-width: 230px;
