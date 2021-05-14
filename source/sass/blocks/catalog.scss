@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 58px;
+    margin-bottom: 6px;
   }
 }
 
@@ -64,7 +64,11 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
-    margin-bottom: 0;
+    margin-bottom: 52px;
+
+    &:last-child {
+      margin-bottom: 52px;
+    }
   }
 }
 

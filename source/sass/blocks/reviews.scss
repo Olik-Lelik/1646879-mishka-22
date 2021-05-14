@@ -19,7 +19,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/icon/zigzag-line.svg");
+    background-image: url("../img/zigzag-line.svg");
     height: 6px;
     width: 100%;
     left: 0;
@@ -35,7 +35,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url("../img/icon/zigzag-line-tablet.svg");
+      background-image: url("../img/zigzag-line-tablet.svg");
       height: 17px;
       width: 100%;
       left: 0;
@@ -72,7 +72,7 @@
     }
 
     &::after {
-      background-image: url("../img/icon/zigzag-line-desktop.svg");
+      background-image: url("../img/zigzag-line-desktop.svg");
       height: 23px;
     }
   }

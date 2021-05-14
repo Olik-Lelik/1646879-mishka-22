@@ -1,7 +1,8 @@
 .site-list {
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
     background-color: transparent;
     align-content: flex-end;
     font-size: 15px;
@@ -11,6 +12,8 @@
     padding: 0;
     display: grid;
     grid-template-columns: 186px auto;
+    grid-template-rows: 88px auto;
+    column-gap: 0;
   }
 }
 
@@ -41,10 +44,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     border: none;
-
-    &:first-child {
-      margin-right: 38px;
-    }
+    white-space: nowrap;
   }
 
   @media (min-width: $desktop-width) {
