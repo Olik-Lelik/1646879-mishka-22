@@ -111,7 +111,7 @@
 }
 
 .contacts__email-inner dt,
-.contacts__address-inner dt{
+.contacts__address-inner dt {
   width: 77px;
 }
 
@@ -126,7 +126,6 @@
 }
 
 .contacts__email-link {
-
   @include link (none, $goshawk-grey);
   border-bottom: 1px solid $downy-2;
   padding-bottom: 3px;
