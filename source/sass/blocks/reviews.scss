@@ -45,7 +45,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../img/review-tablet.jpg");
+      background-image: url("../img/review.jpg");
       background-repeat: no-repeat;
       height: 457px;
       width: 350px;
@@ -54,7 +54,7 @@
       z-index: -1;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/review-tablet@2x.jpg");
+        background-image: url("../img/review@2x.jpg");
         background-size: contain;
       }
     }
@@ -62,14 +62,6 @@
 
   @media (min-width: $desktop-width) {
     padding: 78px 0 185px 174px;
-
-    &::before {
-      background-image: url("../img/review-desktop.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/review-desktop@2x.jpg");
-      }
-    }
 
     &::after {
       background-image: url("../img/zigzag-line-desktop.svg");
