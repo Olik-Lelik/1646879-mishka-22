@@ -74,10 +74,6 @@
   font-size: 14px;
   line-height: 30px;
 
-  & dd {
-    margin: 0;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 17px;
     margin-bottom: 49px;
@@ -97,10 +93,6 @@
   flex-wrap: wrap;
   margin-bottom: 32px;
 
-  & dt {
-    width: 77px;
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
     margin-right: 50px;
@@ -113,17 +105,19 @@
   }
 }
 
+.contacts__list dd {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.contacts__email-inner dt,
+.contacts__address-inner dt{
+  width: 77px;
+}
+
 .contacts__address-inner {
   display: flex;
   flex-wrap: wrap;
-
-  & dt {
-    width: 77px;
-  }
-
-  & dd {
-    flex-grow: 1;
-  }
 
   @media (min-width: $desktop-width) {
     flex-wrap: nowrap;
@@ -131,28 +125,23 @@
   }
 }
 
-.contacts__email {
-  flex-grow: 1;
+.contacts__email-link {
 
-  a {
-    @include link (none, $goshawk-grey);
-    border-bottom: 1px solid $downy-2;
-    padding-bottom: 3px;
+  @include link (none, $goshawk-grey);
+  border-bottom: 1px solid $downy-2;
+  padding-bottom: 3px;
 
-    &:hover {
-      color: $puerto-rico-2;
-      border-color: $puerto-rico-2;
-    }
+  &:hover {
+    color: $puerto-rico-2;
+    border-color: $puerto-rico-2;
+  }
 
-    &:active {
-      border-color: rgba($puerto-rico-2, 0.1);
-    }
+  &:active {
+    border-color: rgba($puerto-rico-2, 0.1);
   }
 
   @media (min-width: $desktop-width) {
-    a {
-      padding-bottom: 7px;
-    }
+    padding-bottom: 7px;
   }
 }
 
@@ -187,11 +176,6 @@
     background-image: url("../img/map-mobile@2x.jpg");
   }
 
-  & iframe {
-    width: 100%;
-    height: 100%;
-  }
-
   @media (min-width: $tablet-width) {
     width: calc(100% + 2 * 50px);
     margin-left: -50px;
@@ -214,4 +198,9 @@
       background-image: url("../img/map-desktop@2x.jpg");
     }
   }
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
 }

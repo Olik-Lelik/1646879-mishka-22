@@ -76,10 +76,6 @@
     order: 1;
   }
 
-  & p {
-    margin: 0;
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
 
@@ -90,10 +86,14 @@
     &:nth-last-child(2) {
       margin-bottom: 0;
     }
+  }
+}
 
-    & p {
-      @include fonts-tablet (20px, 22px);
-    }
+.about__text {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet (20px, 22px);
   }
 }
 

@@ -17,13 +17,13 @@
   }
 }
 
+.site-list__link {
+  @include link (none, $black);
+}
+
 .site-list__item {
   padding: 27px 30px 27px 76px;
   border-top: 1px solid $whisper;
-
-  a {
-    @include link (none, $black);
-  }
 
   &:nth-child(3) {
     display: none;

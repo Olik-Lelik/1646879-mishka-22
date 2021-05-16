@@ -20,38 +20,39 @@
   width: 86px;
   height: 35px;
 
-  & .logo-tablet {
-    display: none;
-  }
-
-  & .logo-desktop {
-    display: none;
-  }
-
   @media (min-width: $tablet-width) {
     width: 114px;
     height: 46px;
-
-    & .logo-tablet {
-      display: block;
-    }
-
-    & .logo-mobile {
-      display: none;
-    }
   }
 
   @media (min-width: $desktop-width) {
     width: 149px;
     height: 72px;
+  }
+}
 
-    & .logo-tablet {
-      display: none;
-    }
+.logo-tablet,
+.logo-desktop {
+  display: none;
+}
 
-    & .logo-desktop {
-      display: block;
-    }
+@media (min-width: $tablet-width) {
+  .logo-tablet {
+    display: block;
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo-tablet {
+    display: none;
+  }
+
+  .logo-desktop {
+    display: block;
   }
 }
 

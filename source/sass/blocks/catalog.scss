@@ -37,14 +37,6 @@
 .catalog__item {
   margin-bottom: 30px;
 
-  & img {
-    display: block;
-    background-color: $white-smoke;
-    max-width: 334px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
   &:last-child {
     margin-bottom: 0;
   }
@@ -70,6 +62,14 @@
       margin-bottom: 52px;
     }
   }
+}
+
+.catalog__item img {
+  display: block;
+  background-color: $white-smoke;
+  max-width: 334px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .catalog__container {

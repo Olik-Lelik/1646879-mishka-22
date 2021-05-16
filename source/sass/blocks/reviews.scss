@@ -113,12 +113,6 @@
   line-height: 30px;
   margin-bottom: 35px;
 
-  @media (min-width: 380px) {
-    & br {
-      display: none;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     font-size: inherit;
     margin-bottom: 62px;
@@ -126,6 +120,12 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 380px) {
+  .reviews__text br {
+    display: none;
   }
 }
 
