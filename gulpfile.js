@@ -161,7 +161,6 @@ exports.default = gulp.series(
   clean,
   copy,
   copyImg,
-  optimizeImg,
   gulp.parallel(
     styles,
     html,
