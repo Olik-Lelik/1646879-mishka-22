@@ -1,0 +1,150 @@
+.modal {
+  display: none;
+  background-color: rgba($white, 0.9);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.modal--opened {
+  display: block;
+}
+
+.modal__wrapper {
+  min-width: 320px;
+  max-width: 566px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 200px;
+  padding: 28px 30px 46px;
+  background-color: $white;
+  border: 1px solid $silver;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: $tablet-width) {
+    padding: 38px 105px 46px;
+  }
+}
+
+.modal__title,
+.modal__text {
+  margin: 0;
+}
+
+.modal__title {
+  @include fonts-mobile (25px, 30px);
+  color: $black;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 50px 14px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-mobile (30px, 57px);
+    margin: 0 0 14px;
+  }
+}
+
+.modal__text {
+  @include fonts-mobile (15px, 30px);
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-mobile (17px, 30px);
+  }
+}
+
+.modal__list {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.modal__item {
+  padding: 17px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.modal__input-radio {
+  & + .modal__label-radio::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba($goshawk-grey, 0.1);
+    top: 0;
+    left: 0;
+  }
+
+  &:checked + .modal__label-radio::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $downy-2;
+    top: 0;
+    left: 0;
+  }
+}
+
+.modal__input-radio:focus-visible + .modal__label-radio::before {
+  outline: auto;
+  outline-offset: 3px;
+}
+
+.modal__input-radio:hover + .modal__label-radio::before {
+  border: 2px solid rgba($goshawk-grey, 0.3);
+}
+
+
+.modal__label-radio {
+  line-height: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.modal__button {
+  @include fonts-mobile (17px, 16px);
+  text-transform: uppercase;
+  font-weight: bold;
+
+  width: 100%;
+  padding: 18px;
+  color: $white;
+  background-color: $downy;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:active {
+    border: 2px solid $downy;
+    margin: -2px;
+    background-color: $white;
+    color: $downy;
+  }
+
+  &:active {
+    color: rgba($downy, 0.5);
+  }
+
+  &:focus-visible {
+    outline: auto;
+    outline-color: $goshawk-grey;
+    outline-offset: 3px;
+  }
+}
