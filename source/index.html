@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" as="image" href="img/hero-mobile.jpg">
+    <link rel="preload" as="image" href="img/hero-mobile@2x.jpg">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -26,16 +30,16 @@
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Новые поступления</a>
+              <a class="site-list__link" href="#">Новые поступления</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Распродажа</a>
+              <a class="site-list__link" href="#">Распродажа</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
@@ -111,12 +115,8 @@
           <button class="card__button button" type="button" aria-label="Заполнить форму для заказа товара недели">Заказать</button>
           <span class="card__image-wrapper">
             <picture>
-              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
-              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-              <img src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+              <source type="image/webp" srcset="img/triple-set.webp 1x, img/triple-set@2x.webp 2x">
+              <img src="img/triple-set.jpg" srcset="img/triple-set@2x.jpg 2x"
               width="260" height="315" alt="Три вязаные корзинки. Большая, средяя и маленькая.">
             </picture>
           </span>
@@ -130,37 +130,37 @@
               <svg class="about__icon-1" width="33" height="38">
                 <use xlink:href="img/sprite.svg#icon-1"></use>
               </svg>
-              <p>Экологически<br> чистые материалы</p>
+              <p class="about__text">Экологически<br> чистые материалы</p>
             </li>
             <li class="about__item">
               <svg class="about__icon-2" width="35" height="34">
                 <use xlink:href="img/sprite.svg#icon-2"></use>
               </svg>
-              <p>Связано вручную<br> с любовью и умилением</p>
+              <p class="about__text">Связано вручную<br> с любовью и умилением</p>
             </li>
             <li class="about__item">
               <svg class="about__icon-3" width="47" height="27">
                 <use xlink:href="img/sprite.svg#icon-3"></use>
               </svg>
-              <p>Скандинавский стиль<br> по российской цене</p>
+              <p class="about__text">Скандинавский стиль<br> по российской цене</p>
             </li>
             <li class="about__item">
               <svg class="about__icon-4" width="55" height="23">
                 <use xlink:href="img/sprite.svg#icon-4"></use>
               </svg>
-              <p>Поддержка отечественного<br> производителя</p>
+              <p class="about__text">Поддержка отечественного<br> производителя</p>
             </li>
             <li class="about__item">
               <svg class="about__icon-5" width="34" height="27">
                 <use xlink:href="img/sprite.svg#icon-5"></use>
               </svg>
-              <p>Увеличивает лайки<br> на фотографиях</p>
+              <p class="about__text">Увеличивает лайки<br> на фотографиях</p>
             </li>
             <li class="about__item">
               <svg class="about__icon-6" width="33" height="32">
                 <use xlink:href="img/sprite.svg#icon-6"></use>
               </svg>
-              <p>Поставляется<br> в подарочной упаковке</p>
+              <p class="about__text">Поставляется<br> в подарочной упаковке</p>
             </li>
           </ul>
         </div>
@@ -214,8 +214,8 @@
           <dl class="contacts__list">
             <div class="contacts__email-inner">
               <dt>e-mail:</dt>
-              <dd class="contacts__email">
-                <a href="#">info@mimimishkashop.ru</a>
+              <dd>
+                <a class="contacts__email-link" href="#">info@mimimishkashop.ru</a>
               </dd>
             </div>
             <div class="contacts__address-inner">
@@ -225,7 +225,7 @@
           </dl>
           <div class="contacts__map">
             <h2 class="visually-hidden">Навигационная карта</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1089.7531408616494!2d30.321169491407385!3d59.9385119552493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619990005115!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe title="Адрес магазина вязаных игрушек Мишка" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1089.7531408616494!2d30.321169491407385!3d59.9385119552493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619990005115!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <a class="contacts__write button" href="#" aria-label="Страница формы для обратной связи">Напишите нам</a>
         </div>

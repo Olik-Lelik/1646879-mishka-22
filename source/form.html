@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
@@ -13,7 +15,7 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a href="index.html" class="logo logo-nothome">
+        <a href="index.html" class="logo logo--working" aria-label="Ссылка на главную сраницу магазина Мишка">
           <svg class="logo__wrapper">
             <use class="logo-mobile" xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
             <use class="logo-tablet" xlink:href="img/sprite.svg#mishka-logo-tablet"></use>
@@ -26,16 +28,16 @@
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Новые поступления</a>
+              <a class="site-list__link" href="#">Новые поступления</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Распродажа</a>
+              <a class="site-list__link" href="#">Распродажа</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
@@ -146,6 +148,7 @@
                 <div class="user-form__item-contacts">
                   <p class="user-form__title-contacts">ТЕЛ</p>
                   <label class="user-form__container">
+                    <span class="visually-hidden">Телефон</span>
                     <input class="user-form__input-contacts" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" >
                     <svg class="user-form__icon-phone" aria-hidden="true" focusable="false" width="25" height="24" opacity="0.2">
                       <use xlink:href="img/sprite.svg#phone"></use>
@@ -155,6 +158,7 @@
                 <div class="user-form__item-contacts">
                   <p class="user-form__title-contacts">E-MAIL</p>
                   <label class="user-form__container">
+                    <span class="visually-hidden">Ваш Email</span>
                     <input class="user-form__input-contacts" type="email" name="user-email" placeholder="Ваш Email*">
                     <svg class="user-form__icon-email" aria-hidden="true" focusable="false" width="32" height="21" opacity="0.2">
                       <use xlink:href="img/sprite.svg#mail"></use>
@@ -164,6 +168,7 @@
               </div>
               <div class="user-form__item">
                 <p class="user-form__title-textarea">ДОП</p>
+                <span class="visually-hidden">Ваши пожелания к заказу</span>
                 <textarea class="user-form__textarea" name="about" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>
               <div class="user-form__item">

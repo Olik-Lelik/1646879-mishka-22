@@ -1,15 +1,17 @@
 @font-face {
   font-family: "Open Sans";
-  src: "../source/fonts/opensans.woff2" format(".woff2");
-  src: "../source/fonts/opensans.woff" format(".woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+  src: "../source/fonts/opensans.woff2" format(".woff2");
+  src: "../source/fonts/opensans.woff" format(".woff");
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: "../source/fonts/opensansbold.woff2" format(".woff2");
-  src: "../source/fonts/opensansbold.woff" format(".woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+  src: "../source/fonts/opensansbold.woff2" format(".woff2");
+  src: "../source/fonts/opensansbold.woff" format(".woff");
 }

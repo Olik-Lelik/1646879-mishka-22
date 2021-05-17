@@ -39,12 +39,12 @@
 
 .page-header__toggle {
   display: none;
+}
 
-  @media (min-width: $tablet-width) {
-    & + .main-nav {
-      display: grid;
-      grid-template-columns: 305px 350px;
-    }
+@media (min-width: $tablet-width) {
+  .page-header__toggle + .main-nav {
+    display: grid;
+    grid-template-columns: 305px 350px;
   }
 }
 
@@ -108,14 +108,12 @@
 
 .page-header__toggle--nojs {
   display: none;
+}
 
-  & + .main-nav {
-    display: block;
-  }
+.page-header__toggle--nojs + .main-nav {
+  display: block;
 
   @media (min-width: $tablet-width) {
-    & + .main-nav {
-      display: flex;
-    }
+    display: flex;
   }
 }
