@@ -144,7 +144,6 @@
 .user-form__title-contacts,
 .user-form__title-textarea {
   @include user-form-title ();
-
   margin-bottom: 29px;
 
   &::after {
@@ -207,10 +206,9 @@
   }
 
   @media (min-width: $tablet-width) {
+    @include fonts-tablet (19px, 18px);
     padding-left: 17px;
     padding-top: 13px;
-
-    @include fonts-tablet (19px, 18px);
   }
 }
 

@@ -112,10 +112,14 @@
             </div>
           </dl>
           <p class="card__price">Цена: 990 руб.</p>
-          <button class="card__button button" type="button" aria-label="Заполнить форму для заказа товара недели">Заказать</button>
+          <a class="card__link button" href="modal.html" aria-label="Выбрать размер изделия и отправить товар в корзину">Заказать</a>
           <span class="card__image-wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/triple-set.webp 1x, img/triple-set@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img src="img/triple-set.jpg" srcset="img/triple-set@2x.jpg 2x"
               width="260" height="315" alt="Три вязаные корзинки. Большая, средяя и маленькая.">
             </picture>
@@ -170,9 +174,8 @@
           <h2 class="reviews__title title">Отзывы</h2>
           <div class="reviews__list">
             <blockquote class="reviews__item reviews__item--activ">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как<br> у популярных инстамамочек.<br>
-                В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br>
-                и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как&nbsp;<br> у популярных инстамамочек.&nbsp;<br>
+                В отчаянии, я накупила аксессуаров и игрушек в Мишке,&nbsp;<br> и мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
               <p class="reviews__autor-name">Анастасия Красильникова</p>
               <p class="reviews__autor-email">@misssssiskras</p>
@@ -276,6 +279,30 @@
         </div>
       </div>
     </footer>
-    <script src="js/nav.min.js"></script>
+    <section class="modal">
+      <h1 class="visually-hidden">Фильтр размеров товара</h1>
+      <div class="modal__wrapper">
+        <p class="modal__title">Добавить в корзину</p>
+        <p class="modal__text">Выберите размер:</p>
+        <form action="#" method="POST">
+          <ul class="modal__list">
+            <li class="modal__item">
+              <input class="modal__input-radio visually-hidden" type="radio" name="sizes-group" value="size-S" id="modal-size-s" checked>
+              <label class="modal__label-radio" for="modal-size-s">S</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__input-radio visually-hidden" type="radio" name="sizes-group" value="size-M" id="modal-size-m" checked>
+              <label class="modal__label-radio" for="modal-size-m">M</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__input-radio visually-hidden" type="radio" name="sizes-group" value="size-L" id="modal-size-l" checked>
+              <label class="modal__label-radio" for="modal-size-l">L</label>
+            </li>
+          </ul>
+          <button class="modal__button" type="submit" aria-label="Добавить товар в корзину">Добавить</button>
+        </form>
+      </div>
+    </section>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

@@ -48,7 +48,6 @@
 
 .video__title {
   @include fonts-mobile ();
-
   padding-left: 57px;
   margin-bottom: 26.5px;
   box-sizing: border-box;
@@ -112,7 +111,6 @@
   background-color: $white-smoke;
   margin-bottom: 35px;
   height: 150px;
-
 
   @media (min-width: $tablet-width) {
     width: calc(100% + (42px + 1px) * 2);
@@ -180,6 +178,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
   transition: 0.3s linear;
 
   &:hover {
@@ -199,7 +198,6 @@
 
 .video__button {
   @include fonts-mobile (18px, 16px);
-
   padding: 16px;
 
   @media (min-width: $tablet-width) {

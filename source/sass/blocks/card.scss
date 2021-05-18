@@ -118,9 +118,8 @@
   max-width: 340px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 52px;
-
     @include fonts-tablet (17px, 30px);
+    margin-bottom: 52px;
   }
 
   @media (min-width: $desktop-width) {
@@ -181,7 +180,7 @@
   }
 }
 
-.card__button {
+.card__link {
   order: 1;
 
   @media (min-width: $tablet-width) {

@@ -4,6 +4,8 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
+const rollup = require("gulp-better-rollup");
+const babel = require("rollup-plugin-babel");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -44,9 +46,9 @@ const html = () => {
 //Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/nav.js")
+  return gulp.src("source/js/scripts.js")
     .pipe(terser())
-    .pipe(rename("nav.min.js"))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }

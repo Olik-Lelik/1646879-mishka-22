@@ -76,7 +76,7 @@
 
   @media (min-width: $tablet-width) {
     @include fonts-tablet ();
-    margin-bottom: 40px;
+    margin-bottom: 38px;
     order: -1;
   }
 
@@ -115,7 +115,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: inherit;
-    margin-bottom: 62px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-width) {
@@ -194,6 +194,7 @@
   padding: 0;
   border: none;
   background-color: $white;
+  cursor: pointer;
 
   &:hover svg {
     opacity: 0.6;

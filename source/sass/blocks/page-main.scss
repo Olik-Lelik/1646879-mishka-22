@@ -55,12 +55,11 @@
 }
 
 .page-main__text {
+  @include fonts-mobile (13px, 24px);
   margin: 0;
   margin-bottom: 30px;
   padding: 0 30px;
   max-width: 350px;
-
-  @include fonts-mobile (13px, 24px);
 
   @media (min-width: $tablet-width) {
     @include fonts-tablet (17px, 30px);

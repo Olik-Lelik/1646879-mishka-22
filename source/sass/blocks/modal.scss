@@ -78,18 +78,18 @@
   }
 }
 
-.modal__input-radio {
-  & + .modal__label-radio::before {
-    content: "";
-    position: absolute;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgba($goshawk-grey, 0.1);
-    top: 0;
-    left: 0;
-  }
+.modal__input-radio + .modal__label-radio::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba($goshawk-grey, 0.1);
+  top: 0;
+  left: 0;
+}
 
+.modal__input-radio {
   &:checked + .modal__label-radio::after {
     content: "";
     position: absolute;
@@ -116,12 +116,14 @@
   line-height: 16px;
   font-weight: bold;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .modal__button {
   @include fonts-mobile (17px, 16px);
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 
   width: 100%;
   padding: 18px;
